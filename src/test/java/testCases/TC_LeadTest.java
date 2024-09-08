@@ -1,0 +1,54 @@
+package testCases;
+
+import org.testng.annotations.Test;
+
+import pageObjects.HomeCRMPage;
+import pageObjects.HomePage;
+import pageObjects.LeadsPage;
+import pageObjects.ProductListingPage;
+import pageObjects.SigninPage;
+import testBase.BaseClass;
+import utilities.DataProviders;
+
+public class TC_LeadTest extends BaseClass
+{
+	@Test(dataProvider = "LeadData", dataProviderClass = DataProviders.class)
+	public void verifyLeadCreate(String fname, String email, String fax, String web, String noofemp, String skype,
+			String street, String comp, String lname) throws InterruptedException
+	{
+		// home pg
+		HomePage hp = new HomePage(driver);
+		hp.clkSignin();
+
+		// signin pg
+		SigninPage sp = new SigninPage(driver);
+		sp.setEmail(p.getProperty("email"));
+		sp.clkNextBtn();
+		Thread.sleep(4000);
+		sp.setPwd(p.getProperty("pwd"));
+		sp.clkSigninBtn();
+
+		// product listing pg
+		ProductListingPage mhp = new ProductListingPage(driver);
+		mhp.clkCRM();
+
+		// crm home pg
+		HomeCRMPage crm = new HomeCRMPage(driver);
+		crm.clkLeadsTab();
+
+		// leads pg
+		LeadsPage lp = new LeadsPage(driver);
+		lp.clkCreateLeadBtn();
+		lp.setFname(fname);
+		lp.setEmail(email);
+		lp.setFax(fax);
+		lp.setWebsite(web);
+		lp.setNoOfEmp(noofemp);
+		lp.setSkype(skype);
+		lp.setStreet(street);
+		lp.setCompany(comp);
+		lp.setLname(lname);
+		lp.clkSave();
+
+	}
+}
