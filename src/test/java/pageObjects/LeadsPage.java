@@ -26,7 +26,6 @@ public class LeadsPage extends BasePage
 	WebElement crmLeadsWEBSITELInput;
 	@FindBy(xpath = "//input[@id='Crm_Leads_EMPCT_LInput']")
 	WebElement crmLeadsEMPCTLInput;
-	@FindBy(css="#Crm_Leads_EMPCT_LInput") WebElement noofemployee;
 	@FindBy(xpath = "//input[@id='Crm_Leads_SKYPEIDENTITY_LInput']")
 	WebElement crmLeadsSKYPEIDENTITYLInput;
 	@FindBy(xpath = "//input[@id='Crm_Leads_LANE_LInput']")
@@ -86,7 +85,7 @@ public class LeadsPage extends BasePage
 
 	public void setNoOfEmp(String noofemp)
 	{
-		noofemployee.sendKeys(noofemp);
+		crmLeadsEMPCTLInput.sendKeys(noofemp);
 	}
 
 	public void setSkype(String skype)
