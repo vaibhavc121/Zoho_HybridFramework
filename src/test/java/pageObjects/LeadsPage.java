@@ -52,6 +52,8 @@ public class LeadsPage extends BasePage
 	WebElement crmLeadsCITYLInput;
 	@FindBy(xpath = "//input[@id='Crm_Leads_CODE_LInput']")
 	WebElement crmLeadsCODELInput;
+	
+	@FindBy(xpath="//span[@id='headervalue_EMAIL']") WebElement email;
 
 	@FindBy(xpath = "//lyte-button[@id='crm_create_savebutnLeads']//lyte-yield[1]")
 	WebElement save;
@@ -109,6 +111,11 @@ public class LeadsPage extends BasePage
 	public void clkSave()
 	{
 		save.click();
+	}
+	
+	public String getEmail()
+	{
+		return email.getText();
 	}
 
 //	public void ()

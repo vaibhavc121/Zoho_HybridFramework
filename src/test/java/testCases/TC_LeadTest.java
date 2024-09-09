@@ -1,5 +1,6 @@
 package testCases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageObjects.HomeCRMPage;
@@ -16,6 +17,8 @@ public class TC_LeadTest extends BaseClass
 	public void verifyLeadCreate(String fname, String email, String fax, String web, String noofemp, String skype,
 			String street, String comp, String lname) throws InterruptedException
 	{
+		logger.info("test case started..");
+		
 		// home pg
 		HomePage hp = new HomePage(driver);
 		hp.clkSignin();
@@ -49,6 +52,12 @@ public class TC_LeadTest extends BaseClass
 		lp.setCompany(comp);
 		lp.setLname(lname);
 		lp.clkSave();
+		
+		String act=lp.getEmail();
+		
+		Assert.assertEquals(act, email);
+		
+		logger.info("test case finished..");
 
 	}
 }

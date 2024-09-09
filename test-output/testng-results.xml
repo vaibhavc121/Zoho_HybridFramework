@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-09T00:25:22 IST" name="Suite" finished-at="2024-09-09T00:27:06 IST" duration-ms="104466">
+  <suite started-at="2024-09-09T17:59:24 IST" name="MasterSuite" finished-at="2024-09-09T17:59:53 IST" duration-ms="29292">
     <groups>
     </groups>
-    <test started-at="2024-09-09T00:25:22 IST" name="Test" finished-at="2024-09-09T00:27:06 IST" duration-ms="104466">
+    <test started-at="2024-09-09T17:59:24 IST" name="Regression" finished-at="2024-09-09T17:59:53 IST" duration-ms="29292">
       <class name="testCases.TC_LeadTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_LeadTest@55322aab]" started-at="2024-09-09T00:25:22 IST" name="setup" finished-at="2024-09-09T00:25:47 IST" duration-ms="25116" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_LeadTest@6b9ce1bf]" started-at="2024-09-09T17:59:24 IST" name="setup" finished-at="2024-09-09T17:59:29 IST" duration-ms="5677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyLeadCreate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_LeadTest@55322aab]" started-at="2024-09-09T00:25:50 IST" name="verifyLeadCreate" data-provider="LeadData" finished-at="2024-09-09T00:27:06 IST" duration-ms="76239" status="PASS">
+        <test-method signature="verifyLeadCreate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_LeadTest@6b9ce1bf]" started-at="2024-09-09T17:59:30 IST" name="verifyLeadCreate" data-provider="LeadData" finished-at="2024-09-09T17:59:53 IST" duration-ms="22762" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -62,11 +62,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLeadCreate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_LeadTest@55322aab]" started-at="2024-09-09T00:27:06 IST" name="tearDown" finished-at="2024-09-09T00:27:06 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_LeadTest@6b9ce1bf]" started-at="2024-09-09T17:59:53 IST" name="tearDown" finished-at="2024-09-09T17:59:53 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC_LeadTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Regression -->
+  </suite> <!-- MasterSuite -->
 </testng-results>
