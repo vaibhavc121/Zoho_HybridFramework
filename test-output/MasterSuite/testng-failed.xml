@@ -5,9 +5,10 @@
     <classes>
       <class name="testCases.TC_LeadTest">
         <methods>
-          <include name="verifyLeadCreate" invocation-numbers="0"/>
+          <include name="verifyLeadCreate"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="login"/>
         </methods>
       </class> <!-- testCases.TC_LeadTest -->
     </classes>

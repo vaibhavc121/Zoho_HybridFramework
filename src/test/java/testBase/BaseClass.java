@@ -11,6 +11,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+
+import pageObjects.HomePage;
+import pageObjects.ProductListingPage;
+import pageObjects.SigninPage;
 
 public class BaseClass
 {
@@ -45,6 +50,26 @@ public class BaseClass
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(p.getProperty("appurl"));
+	}
+
+	@BeforeMethod
+	public void login() throws InterruptedException
+	{
+		// home pg
+		HomePage hp = new HomePage(driver);
+		hp.clkSignin();
+
+		// signin pg
+		SigninPage sp = new SigninPage(driver);
+		sp.setEmail(p.getProperty("email"));
+		sp.clkNextBtn();
+		Thread.sleep(4000);
+		sp.setPwd(p.getProperty("pwd"));
+		sp.clkSigninBtn();
+
+		// product listing pg
+		ProductListingPage mhp = new ProductListingPage(driver);
+		mhp.clkCRM();
 	}
 
 	@AfterClass

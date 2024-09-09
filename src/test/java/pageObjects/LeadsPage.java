@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.google.common.base.Ticker;
-
 public class LeadsPage extends BasePage
 {
 
@@ -15,7 +13,7 @@ public class LeadsPage extends BasePage
 		// TODO Auto-generated constructor stub
 	}
 
-	@FindBy(xpath = "//button[normalize-space()='Create Lead']")
+	@FindBy(css = "button[aria-label='Create Lead']")
 	WebElement createLead;
 
 	@FindBy(xpath = "//input[@id='Crm_Leads_FIRSTNAME_LInput']")
@@ -54,8 +52,9 @@ public class LeadsPage extends BasePage
 	WebElement crmLeadsCITYLInput;
 	@FindBy(xpath = "//input[@id='Crm_Leads_CODE_LInput']")
 	WebElement crmLeadsCODELInput;
-	
-	@FindBy(xpath="//span[@id='headervalue_EMAIL']") WebElement email;
+
+	@FindBy(xpath = "//span[@id='headervalue_EMAIL']")
+	WebElement email;
 
 	@FindBy(xpath = "//lyte-button[@id='crm_create_savebutnLeads']//lyte-yield[1]")
 	WebElement save;
@@ -109,57 +108,57 @@ public class LeadsPage extends BasePage
 	{
 		crmLeadsLASTNAMELInput.sendKeys(lname);
 	}
-	
+
 	public void setState(String state)
 	{
 		crmLeadsSTATELInput.sendKeys(state);
-	}	
+	}
 
 	public void setCountry(String country)
 	{
 		inputId.sendKeys(country);
 	}
-	
+
 	public void setDesc(String desc)
 	{
 		cruxTextArea.sendKeys(desc);
 	}
-	
+
 	public void setTitle(String title)
 	{
 		crmLeadsDESIGNATIONLInput.sendKeys(title);
 	}
-	
+
 	public void setPhone(String ph)
 	{
 		crmLeadsPHONELInput.sendKeys(ph);
 	}
-	
+
 	public void setMbl(String mbl)
 	{
 		crmLeadsMOBILELInput.sendKeys(mbl);
 	}
-	
+
 	public void setSemail(String semail)
 	{
 		crmLeadsADDNEMAILLInput.sendKeys(semail);
 	}
-	
+
 	public void setCity(String city)
 	{
 		crmLeadsCITYLInput.sendKeys(city);
 	}
-	
+
 	public void setZip(String zip)
 	{
 		crmLeadsCODELInput.sendKeys(zip);
 	}
-	
+
 	public void clkSave()
 	{
 		save.click();
 	}
-	
+
 	/* Verification/Assertion method starts */
 	public String getEmail()
 	{
