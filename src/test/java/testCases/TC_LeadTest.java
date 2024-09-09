@@ -15,7 +15,7 @@ public class TC_LeadTest extends BaseClass
 {
 	@Test(dataProvider = "LeadData", dataProviderClass = DataProviders.class)
 	public void verifyLeadCreate(String fname, String email, String fax, String web, String noofemp, String skype,
-			String street, String comp, String lname) throws InterruptedException
+			String street, String state, String country, String desc, String comp, String lname, String title, String ph, String mbl, String semail, String city, String zip) throws InterruptedException
 	{
 		logger.info("test case started..");
 		

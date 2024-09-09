@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.google.common.base.Ticker;
+
 public class LeadsPage extends BasePage
 {
 
@@ -107,75 +109,61 @@ public class LeadsPage extends BasePage
 	{
 		crmLeadsLASTNAMELInput.sendKeys(lname);
 	}
+	
+	public void setState(String state)
+	{
+		crmLeadsSTATELInput.sendKeys(state);
+	}	
 
+	public void setCountry(String country)
+	{
+		inputId.sendKeys(country);
+	}
+	
+	public void setDesc(String desc)
+	{
+		cruxTextArea.sendKeys(desc);
+	}
+	
+	public void setTitle(String title)
+	{
+		crmLeadsDESIGNATIONLInput.sendKeys(title);
+	}
+	
+	public void setPhone(String ph)
+	{
+		crmLeadsPHONELInput.sendKeys(ph);
+	}
+	
+	public void setMbl(String mbl)
+	{
+		crmLeadsMOBILELInput.sendKeys(mbl);
+	}
+	
+	public void setSemail(String semail)
+	{
+		crmLeadsADDNEMAILLInput.sendKeys(semail);
+	}
+	
+	public void setCity(String city)
+	{
+		crmLeadsCITYLInput.sendKeys(city);
+	}
+	
+	public void setZip(String zip)
+	{
+		crmLeadsCODELInput.sendKeys(zip);
+	}
+	
 	public void clkSave()
 	{
 		save.click();
 	}
 	
+	/* Verification/Assertion method starts */
 	public String getEmail()
 	{
 		return email.getText();
 	}
-
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
-//	
-//	public void ()
-//	{
-//		
-//	}
 
 }
