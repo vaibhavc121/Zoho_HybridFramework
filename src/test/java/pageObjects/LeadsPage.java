@@ -1,5 +1,8 @@
 package pageObjects;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +19,8 @@ public class LeadsPage extends BasePage
 	@FindBy(css = "button[aria-label='Create Lead']")
 	WebElement createLead;
 
+	@FindBy(xpath = "//div[@aria-label='Salutation']//lyte-drop-button")
+	WebElement None;
 	@FindBy(xpath = "//input[@id='Crm_Leads_FIRSTNAME_LInput']")
 	WebElement crmLeadsFIRSTNAMELInput;
 	@FindBy(xpath = "//input[@id='Crm_Leads_EMAIL_LInput']")
@@ -62,6 +67,29 @@ public class LeadsPage extends BasePage
 	public void clkCreateLeadBtn()
 	{
 		createLead.click();
+	}
+
+	public void clkSalutation()
+	{
+		None.click();
+	}
+
+	public void slctSalutation()
+	{
+		List<WebElement> ele = driver
+				.findElements(By.xpath("//lyte-drop-item[@role='option' and @aria-selected='false']"));
+		System.out.println(ele.size());
+
+		// ele.get(1).click();
+		for (int i = 0; i < ele.size(); i++)
+		{
+			ele.get(i).getText();
+			if (ele.get(i).getText().equalsIgnoreCase("Mr."))
+			{
+				ele.get(i).click();
+				break;
+			}
+		}
 	}
 
 	public void setFname(String fname)

@@ -40,6 +40,9 @@ public class TC_LeadTest extends BaseClass
 		// leads pg
 		LeadsPage lp = new LeadsPage(driver);
 		lp.clkCreateLeadBtn();
+		lp.clkSalutation();
+		lp.slctSalutation();
+		Thread.sleep(5000);
 		lp.setFname(fname);
 		lp.setEmail(email);
 		lp.setFax(fax);
