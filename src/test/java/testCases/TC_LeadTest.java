@@ -1,5 +1,6 @@
 package testCases;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,9 +12,11 @@ import utilities.DataProviders;
 public class TC_LeadTest extends BaseClass
 {
 	@Test(dataProvider = "LeadData", dataProviderClass = DataProviders.class)
-	public void verifyLeadCreate(String fname, String email, String fax, String web, String noofemp, String skype,
-			String street, String state, String country, String desc, String comp, String lname, String title,
-			String ph, String mbl, String semail, String city, String zip) throws InterruptedException
+	public void verifyLeadCreate(String sltn, String fname, String email, String fax, String web, String lstatus,
+			String noofemp, String skype, String street, String state, String country, String desc, String comp,
+			String lname, String title, String ph, String mbl, String lsrc, String industry, String rating,
+			String semail, String city, String zip)
+			throws InterruptedException, NoSuchElementException, java.util.NoSuchElementException
 	{
 		logger.info("test case started..");
 
@@ -41,12 +44,14 @@ public class TC_LeadTest extends BaseClass
 		LeadsPage lp = new LeadsPage(driver);
 		lp.clkCreateLeadBtn();
 		lp.clkSalutation();
-		lp.slctSalutation();
+		lp.slctSalutation(sltn);
 		Thread.sleep(5000);
 		lp.setFname(fname);
 		lp.setEmail(email);
 		lp.setFax(fax);
 		lp.setWebsite(web);
+		lp.clkLeadStatus();
+		lp.slctLeadStatus(lstatus);
 		lp.setNoOfEmp(noofemp);
 		lp.setSkype(skype);
 		lp.setStreet(street);
@@ -58,6 +63,12 @@ public class TC_LeadTest extends BaseClass
 		lp.setTitle(title);
 		lp.setPhone(ph);
 		lp.setMbl(mbl);
+		lp.clkLeadSrc();
+		lp.slctLeadSrc(lsrc);
+		lp.clkIndustry();
+		lp.slctIndustry(industry);
+		lp.clkRating();
+		lp.slctRating(rating);
 		lp.setSemail(semail);
 		lp.setCity(city);
 		lp.setZip(zip);

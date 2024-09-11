@@ -2,107 +2,132 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-10T22:31:11 IST" name="MasterSuite" finished-at="2024-09-10T22:32:57 IST" duration-ms="105740">
+  <suite started-at="2024-09-11T22:57:30 IST" name="MasterSuite" finished-at="2024-09-11T22:59:53 IST" duration-ms="143104">
     <groups>
     </groups>
-    <test started-at="2024-09-10T22:31:11 IST" name="Regression" finished-at="2024-09-10T22:32:57 IST" duration-ms="105740">
+    <test started-at="2024-09-11T22:57:30 IST" name="Regression" finished-at="2024-09-11T22:59:53 IST" duration-ms="143104">
       <class name="testCases.TC_LeadTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_LeadTest@146587a2]" started-at="2024-09-10T22:31:11 IST" name="setup" finished-at="2024-09-10T22:31:21 IST" duration-ms="9590" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_LeadTest@35229f85]" started-at="2024-09-11T22:57:30 IST" name="setup" finished-at="2024-09-11T22:57:50 IST" duration-ms="19709" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testCases.TC_LeadTest@146587a2]" started-at="2024-09-10T22:31:24 IST" name="login" finished-at="2024-09-10T22:32:36 IST" duration-ms="72542" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:testCases.TC_LeadTest@35229f85]" started-at="2024-09-11T22:57:52 IST" name="login" finished-at="2024-09-11T22:59:00 IST" duration-ms="67688" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="verifyLeadCreate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_LeadTest@146587a2]" started-at="2024-09-10T22:32:36 IST" name="verifyLeadCreate" data-provider="LeadData" finished-at="2024-09-10T22:32:57 IST" duration-ms="20474" status="PASS">
+        <test-method signature="verifyLeadCreate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_LeadTest@35229f85]" started-at="2024-09-11T22:59:00 IST" name="verifyLeadCreate" data-provider="LeadData" finished-at="2024-09-11T22:59:53 IST" duration-ms="53050" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[vaibhav]]>
+                <![CDATA[Mr.]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[vaibhavc121@gmail.com]]>
+                <![CDATA[vaibhav]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[1234]]>
+                <![CDATA[vaibhavc121@gmail.com]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[www.vaibhav.com]]>
+                <![CDATA[1234]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[50]]>
+                <![CDATA[www.vaibhav.com]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[vaibhav]]>
+                <![CDATA[Attempted to Contact]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[pune]]>
+                <![CDATA[50]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[ebs]]>
+                <![CDATA[vaibhav]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[chavan]]>
+                <![CDATA[pune]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[mh]]>
+                <![CDATA[ebs]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[ind]]>
+                <![CDATA[chavan]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[desc]]>
+                <![CDATA[mh]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[title]]>
+                <![CDATA[ind]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[7769967226]]>
+                <![CDATA[desc]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[7769967226]]>
+                <![CDATA[title]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[secemail@gmail.com]]>
+                <![CDATA[7769967226]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[pune]]>
+                <![CDATA[7769967226]]>
               </value>
             </param>
             <param index="17">
+              <value>
+                <![CDATA[Advertisement]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[ASP (Application Service Provider)]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[Acquired]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[secemail@gmail.com]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[pune]]>
+              </value>
+            </param>
+            <param index="22">
               <value>
                 <![CDATA[416410]]>
               </value>
@@ -111,7 +136,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLeadCreate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_LeadTest@146587a2]" started-at="2024-09-10T22:32:57 IST" name="tearDown" finished-at="2024-09-10T22:32:57 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_LeadTest@35229f85]" started-at="2024-09-11T22:59:53 IST" name="tearDown" finished-at="2024-09-11T22:59:53 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

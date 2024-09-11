@@ -29,6 +29,8 @@ public class LeadsPage extends BasePage
 	WebElement crmLeadsFAXLInput;
 	@FindBy(xpath = "//input[@id='Crm_Leads_WEBSITE_LInput']")
 	WebElement crmLeadsWEBSITELInput;
+	@FindBy(xpath = "//lyte-dropdown[@id='Crm_Leads_STATUS']//lyte-drop-button")
+	WebElement leads;
 	@FindBy(xpath = "//input[@id='Crm_Leads_EMPCT_LInput']")
 	WebElement crmLeadsEMPCTLInput;
 	@FindBy(xpath = "//input[@id='Crm_Leads_SKYPEIDENTITY_LInput']")
@@ -51,6 +53,12 @@ public class LeadsPage extends BasePage
 	WebElement crmLeadsPHONELInput;
 	@FindBy(xpath = "//input[@id='Crm_Leads_MOBILE_LInput']")
 	WebElement crmLeadsMOBILELInput;
+	@FindBy(xpath = "//lyte-dropdown[@id='Crm_Leads_LEADSOURCE']//lyte-icon[@class='dropdown']")
+	WebElement leadsource;
+	@FindBy(xpath = "//lyte-dropdown[@id='Crm_Leads_INDUSTRY']//lyte-icon[@class='dropdown']")
+	WebElement industry;
+	@FindBy(xpath = "//lyte-dropdown[@id='Crm_Leads_RATING']//lyte-icon[@class='dropdown']")
+	WebElement rating;
 	@FindBy(xpath = "//input[@id='Crm_Leads_ADDN_EMAIL_LInput']")
 	WebElement crmLeadsADDNEMAILLInput;
 	@FindBy(xpath = "//input[@id='Crm_Leads_CITY_LInput']")
@@ -74,7 +82,7 @@ public class LeadsPage extends BasePage
 		None.click();
 	}
 
-	public void slctSalutation()
+	public void slctSalutation(String sltn)
 	{
 		List<WebElement> ele = driver
 				.findElements(By.xpath("//lyte-drop-item[@role='option' and @aria-selected='false']"));
@@ -84,7 +92,7 @@ public class LeadsPage extends BasePage
 		for (int i = 0; i < ele.size(); i++)
 		{
 			ele.get(i).getText();
-			if (ele.get(i).getText().equalsIgnoreCase("Mr."))
+			if (ele.get(i).getText().equalsIgnoreCase(sltn))
 			{
 				ele.get(i).click();
 				break;
@@ -110,6 +118,28 @@ public class LeadsPage extends BasePage
 	public void setWebsite(String web)
 	{
 		crmLeadsWEBSITELInput.sendKeys(web);
+	}
+
+	public void clkLeadStatus()
+	{
+		leads.click();
+	}
+
+	public void slctLeadStatus(String lstatus)
+	{
+		List<WebElement> ele = driver.findElements(By.xpath("//lyte-drop-item[contains(@id,'Lyte_Drop_Item_')]"));
+		System.out.println(ele.size());
+
+		// ele.get(1).click();
+		for (int i = 0; i < ele.size(); i++)
+		{
+			ele.get(i).getText();
+			if (ele.get(i).getText().equalsIgnoreCase(lstatus))
+			{
+				ele.get(i).click();
+				break;
+			}
+		}
 	}
 
 	public void setNoOfEmp(String noofemp)
@@ -165,6 +195,72 @@ public class LeadsPage extends BasePage
 	public void setMbl(String mbl)
 	{
 		crmLeadsMOBILELInput.sendKeys(mbl);
+	}
+
+	public void clkLeadSrc()
+	{
+		leadsource.click();
+	}
+
+	public void slctLeadSrc(String lsrc)
+	{
+		List<WebElement> ele = driver.findElements(By.xpath("//lyte-drop-item[contains(@id,'Lyte_Drop_Item_')]"));
+		System.out.println(ele.size());
+
+		// ele.get(1).click();
+		for (int i = 0; i < ele.size(); i++)
+		{
+			ele.get(i).getText();
+			if (ele.get(i).getText().equalsIgnoreCase(lsrc))
+			{
+				ele.get(i).click();
+				break;
+			}
+		}
+	}
+
+	public void clkIndustry()
+	{
+		industry.click();
+	}
+
+	public void slctIndustry(String industry)
+	{
+		List<WebElement> ele = driver.findElements(By.xpath("//lyte-drop-item[contains(@id,'Lyte_Drop_Item_')]"));
+		System.out.println(ele.size());
+
+		// ele.get(1).click();
+		for (int i = 0; i < ele.size(); i++)
+		{
+			ele.get(i).getText();
+			if (ele.get(i).getText().equalsIgnoreCase(industry))
+			{
+				ele.get(i).click();
+				break;
+			}
+		}
+	}
+
+	public void clkRating()
+	{
+		rating.click();
+	}
+
+	public void slctRating(String rating)
+	{
+		List<WebElement> ele = driver.findElements(By.xpath("//lyte-drop-item[contains(@id,'Lyte_Drop_Item_')]"));
+		System.out.println(ele.size());
+
+		// ele.get(1).click();
+		for (int i = 0; i < ele.size(); i++)
+		{
+			ele.get(i).getText();
+			if (ele.get(i).getText().equalsIgnoreCase(rating))
+			{
+				ele.get(i).click();
+				break;
+			}
+		}
 	}
 
 	public void setSemail(String semail)
