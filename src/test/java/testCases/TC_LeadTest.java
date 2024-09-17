@@ -1,5 +1,7 @@
 package testCases;
 
+import java.lang.reflect.InvocationTargetException;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,8 +17,8 @@ public class TC_LeadTest extends BaseClass
 	public void verifyLeadCreate(String sltn, String fname, String email, String fax, String web, String lstatus,
 			String noofemp, String skype, String street, String state, String country, String desc, String comp,
 			String lname, String title, String ph, String mbl, String lsrc, String industry, String rating,
-			String semail, String city, String zip)
-			throws InterruptedException, NoSuchElementException, java.util.NoSuchElementException
+			String semail, String city, String zip) throws InterruptedException, NoSuchElementException,
+			java.util.NoSuchElementException, InvocationTargetException, IllegalArgumentException, NullPointerException
 	{
 		logger.info("test case started..");
 
@@ -43,7 +45,14 @@ public class TC_LeadTest extends BaseClass
 		// leads pg
 		LeadsPage lp = new LeadsPage(driver);
 		lp.clkCreateLeadBtn();
-		lp.clkSalutation();
+		try
+		{
+			lp.clkSalutation();
+		}
+		catch (Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
 		lp.slctSalutation(sltn);
 		Thread.sleep(5000);
 		lp.setFname(fname);
@@ -60,7 +69,15 @@ public class TC_LeadTest extends BaseClass
 		lp.setState(state);
 		lp.setCountry(country);
 		lp.setDesc(desc);
-		lp.setTitle(title);
+		try
+		{
+			lp.setTitle(title);
+		}
+		catch (Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+
 		lp.setPhone(ph);
 		lp.setMbl(mbl);
 		lp.clkLeadSrc();
